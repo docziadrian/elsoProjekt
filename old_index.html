@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kosár</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <body data-bs-theme="dark">
+    <div class="container p-2">
+      <header class="text-center font-monospace h-6 text-muted">
+        WebKosár is avaliable now!
+      </header>
+      <main style="min-height: 90vh; max-height: 90vh">
+        <!-- Form -->
+        <div class="mb-3">
+          <label for="pNameIn" class="form-label">Product name</label>
+          <input type="text" class="form-control" id="pNameIn" />
+        </div>
+        <div class="mb-3">
+          <label for="pPriceIn" class="form-label">Product price (1x)</label>
+          <input type="text" class="form-control" id="pPriceIn" />
+        </div>
+        <div class="mb-3">
+          <label for="amountIn" class="form-label">Mennyiség (def: 1x)</label>
+          <input type="text" class="form-control" id="amountIn" />
+        </div>
+        <button type="button" class="btn btn-light" id="okBtn">OK</button>
+        <!-- Table -->
+        <table class="table table-dark table-striped py-5 my-5">
+          <thead>
+            <tr class="text-end">
+              <th style="width: 10em"></th>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price (1x)</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody class="text-end" id="tbodyForAddItems"></tbody>
+          <tfoot>
+            <td colspan="7" id="totalPrice" class="text-end">0 HUF</td>
+          </tfoot>
+        </table>
+      </main>
+      <footer>
+        <h2 class="h5 text-center">Feel free to shop anything</h2>
+      </footer>
+    </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
