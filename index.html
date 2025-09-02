@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <!-- Script -->
-    <script src="js/app.js"></script>
+
     <script src="js/bootstrap.min.js"></script>
   </head>
   <body data-bs-theme="dark">
@@ -42,18 +42,28 @@
                 <div>
                   <div class="mb-3">
                     <label for="name" class="form-label">Név</label>
-                    <input type="text" class="form-control" id="name" />
+                    <input type="text" class="form-control" id="nameField" />
                   </div>
                   <div class="mb-3">
                     <label for="price" class="form-label">Egys. ár</label>
-                    <input type="number" class="form-control" id="price" />
+                    <input type="number" class="form-control" id="priceField" />
                   </div>
                   <div class="mb-3">
                     <label for="amount" class="form-label">Mennyiség</label>
-                    <input type="number" class="form-control" id="amount" />
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amountField"
+                    />
                   </div>
 
-                  <button class="btn btn-primary">Hozzáad</button>
+                  <button
+                    type="button"
+                    id="okSubmitButton"
+                    class="btn btn-primary"
+                  >
+                    Hozzáad
+                  </button>
                 </div>
               </div>
             </div>
@@ -71,19 +81,13 @@
               <th class="text-end" scope="col">Össz.</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>n</td>
-              <td>s</td>
-              <td>n</td>
-              <td>n</td>
-              <td>n</td>
-            </tr>
-          </tbody>
+          <tbody id="itemsList"></tbody>
           <tfoot>
             <tr>
               <td colspan="4">Összesen</td>
-              <td class="text-end font-monospace h5">0 FT</td>
+              <td class="text-end font-monospace h5">
+                <span class="text-danger" id="summaryText">0 </span>Ft
+              </td>
             </tr>
           </tfoot>
         </table>
@@ -92,5 +96,7 @@
         <h5>Bajai SZC Türr István Technikum</h5>
       </footer>
     </div>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
